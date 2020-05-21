@@ -35,6 +35,11 @@ for ch in range(1, 8):  # ch denotes the number of characters or hexadecimal dig
             while 1:
 
                 input = random.randint(1000, 100000000000000000000000000)  # random number generator
+                
+                # hashlib generates the hash value and stores the digest in result
+                # in this program, the algorithm used is SHA-1
+                # the algorithm can be changed by replacing 'sha1' in 'hashlib.sha1' with 'md5', 'sha256' or 'sha512'
+                
                 result = hashlib.sha1(str(input).encode()).hexdigest()  
                 # Generating a string by concatenating characters from the randomly chosen positions
 
